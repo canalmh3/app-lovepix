@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <title>APP VELHOS RICOS</title>
+      <link rel="shortcut icon" href="images/ico-app.png" />
+      <meta name="robots" content="max-image-preview:large">
+      <link rel="stylesheet" id="elementor-frontend-css" href="css/frontend-lite.min_1.css" media="all">
+      <link rel="stylesheet" id="swiper-css" href="css/swiper.min.css" media="all">
+      <link rel="stylesheet" id="elementor-post-6-css" href="css/post-6.css" media="all">
+      <link rel="stylesheet" id="elementor-pro-css" href="css/frontend-lite.min.css" media="all">
+      <link rel="stylesheet" id="elementor-global-css" href="css/global.css" media="all">
+      <link rel="stylesheet" id="elementor-post-2-css" href="css/post-2.css" media="all">
+      <link rel="stylesheet" id="elementor-post-148-css" href="css/post-148.css" media="all">
+      <link rel="stylesheet" id="disabled-source-and-content-protection-css-css" href="css/style.css" media="all">
+      <link rel="stylesheet" id="rishi-style-css" href="css/style.min.css" media="all">
+      <style id="rishi-style-inline-css">
+         :root{--e-global-color-rishi1:rgba(41, 41, 41, 0.9);--e-global-color-rishi2:#292929;--e-global-color-rishi3:#216BDB;--e-global-color-rishi4:#5081F5;--e-global-color-rishi5:#ffffff;--e-global-color-rishi6:#ffffff;--e-global-color-rishi7:#ffffff;--e-global-color-rishi8:#ffffff;}
+      </style>
+      <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CSora%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.4.2" media="all">
+      <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+      <script src="js/jquery.min.js" id="jquery-core-js"></script>
+      <script src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+      <style>
+         .notifyjs-bootstrap-base {
+         background-color: #F2DEDE !important;
+         border-color: #F2DEDE!important;
+         color: #B94A48!important;
+         }
+      </style>
+   </head>
+   <body class="page-template page-template-elementor_canvas page page-id-2 wp-embed-responsive box-layout rishi-has-blocks full-width rt-loading elementor-default elementor-template-canvas elementor-kit-6 elementor-page elementor-page-2">
+      <div data-elementor-type="wp-page" data-elementor-id="2" class="elementor elementor-2" data-elementor-post-type="page">
+         <div class="elementor-element elementor-element-35e3503 e-con-full e-flex e-con e-parent" data-id="35e3503" data-element_type="container" data-settings="{" content_width":"full","background_background":"classic"}"="" data-core-v316-plus="true">
+         <div class="elementor-element elementor-element-d88827b elementor-widget elementor-widget-html" data-id="d88827b" data-element_type="widget" data-widget_type="html.default">
+            <div class="elementor-widget-container">
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Simulador de Conversa</title>
+               <style>
+                  body {
+                  font-family: 'Arial', sans-serif;
+                  background-color: #ffffff;
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: start;
+                  min-height: 100vh;
+                  padding-top: 10px;
+                  }
+                  .top-bar {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 10px;
+                  background-color: #ffffff;
+                  border-radius: 8px;
+                  width: 100%;
+                  max-width: 400px;
+                  margin-bottom: 10px;
+                  }
+                  .logo {
+                  width: 104px;
+                  }
+                  .saldo {
+                  background-color: #ff008a;
+                  color: white;
+                  border-radius: 8px;
+                  padding: 7px 14px;
+                  font-size: 0.9em;
+                  }
+                  .profile-card {
+                  width: 100%;
+                  max-width: 400px;
+                  border-radius: 8px;
+                  background-color: #ffffff;
+                  text-align: center;
+                  padding-bottom: 10px;
+                  }
+                  .profile-image {
+                  width: 90%;
+                  margin: 0 auto;
+                  border-radius: 8px 8px 0 0;
+                  margin-bottom: 8px;
+                  }
+                  .send-message, .send-message:focus {
+                  background-color: #19b081;
+                  color: white;
+                  padding: 15px 30px;
+                  border: none;
+                  border-radius: 8px;
+                  cursor: pointer;
+                  font-size: 1em;
+                  width: 85%;
+                  outline: none;
+                  transition: background-color 0.3s;
+                  }
+                  .send-message:hover {
+                  background-color: #1dc893;
+                  color: #ffffff; /* Adicionado para mudar a cor do texto para branco quando hover */
+                  }
+                  /* Estilos para o Pop-up e Overlay */
+                  .popup {
+                  display: none;
+                  position: fixed;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  background-color: white;
+                  border-radius: 20px;
+                  z-index: 1000;
+                  font-family: 'Montserrat', sans-serif;
+                  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+                  width: 80%; /* Largura base para responsividade */
+                  max-width: 400px; /* Largura máxima para telas maiores */
+                  padding: 30px; /* Espaçamento interno */
+                  text-align: center; /* Centraliza todo o texto dentro do popup */
+                  }
+                  .popup h2 {
+                  color: #ff008a;
+                  margin: 0;
+                  font-size: 36px;
+                  font-weight: bold;
+                  }
+                  .popup .balance-increased {
+                  color: #000000;
+                  margin: 10px 0;
+                  font-size: 18px;
+                  }
+                  .popup .congrats {
+                  font-size: 1.5em;
+                  font-weight: 700;
+                  color: #ff008a;
+                  margin: 0.5em 0;
+                  }
+                  .popup .evaluations {
+                  font-size: 0.8em;
+                  font-weight: 700;
+                  color: #333;
+                  margin: 0.5em 0;
+                  }
+                  .popup button {
+                  background-color: #ff008a;
+                  border: none;
+                  color: white;
+                  padding: 1em 2em;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 1em;
+                  border-radius: 10px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.24), 0 2px 10px rgba(0, 0, 0, 0.19);
+                  font-weight: bold;
+                  width: 80%;
+                  max-width: 300px;
+                  cursor: pointer;
+                  transition: background-color 0.3s;
+                  }
+                  .popup button:hover {
+                  background-color: #e60077;
+                  }
+                  /* Media Queries para responsividade em dispositivos móveis */
+                  @media (max-width: 768px) {
+                  .popup h2 {
+                  font-size: calc(28px * 1.2); /* Aumentar o tamanho em dispositivos móveis se necessário */
+                  }
+                  .popup .congrats {
+                  font-size: calc(22px * 1.2); /* Ajustar o tamanho em dispositivos móveis se for muito grande */
+                  }
+                  .popup .evaluations {
+                  font-size: calc(14px * 1.2); /* Aumentar o tamanho em dispositivos móveis */
+                  }
+                  .popup button {
+                  padding: calc(12px * 1.2) calc(24px * 1.2); /* Ajustar o padding em dispositivos móveis se necessário */
+                  font-size: calc(16px * 1.2); /* Ajustar o tamanho da fonte em dispositivos móveis */
+                  }
+                  }
+                  @media (max-width: 480px) {
+                  .popup h2 {
+                  font-size: calc(28px * 1.2); /* Aumentar o tamanho em dispositivos muito pequenos se necessário */
+                  }
+                  .popup .congrats {
+                  font-size: calc(22px * 1.2); /* Ajustar o tamanho em dispositivos muito pequenos se for muito grande */
+                  }
+                  .popup .evaluations {
+                  font-size: calc(14px * 1.2); /* Aumentar o tamanho em dispositivos muito pequenos */
+                  }
+                  .popup button {
+                  padding: calc(12px * 1.2) calc(24px * 1.2); /* Ajustar o padding em dispositivos muito pequenos se necessário */
+                  font-size: calc(16px * 1.2); /* Ajustar o tamanho da fonte em dispositivos muito pequenos */
+                  }
+                  }
+               </style>
+               <div class="top-bar">
+                  <img decoding="async" class="logo" src="images/ahl7c-z0rh3.svg" alt="Logo Velho Rico">
+                  <div class="saldo" id="current-saldo">Saldo: R$ 50,00</div>
+               </div>
+               <div class="profile-card">
+                  <img decoding="async" id="profile-image" class="profile-image" src="images/velhorico1-atualizado.webp" alt="Perfil">
+                  <button id="send-message-button" class="send-message" onclick="sendMessage()">Enviar uma mensagem com "Oi"</button>
+               </div>
+               <!-- Div para o Pop-up -->
+               <div class="overlay" onclick="closePopup()"></div>
+               <div class="popup" id="popup">
+                  <h2>R$ 141,80</h2>
+                  <p class="balance-increased">Seu saldo subiu!</p>
+                  <p class="congrats">Parabéns!</p>
+                  <p class="evaluations">Você realizou suas 5 primeiras conversas!</p>
+                  <a href="../saque" style="text-decoration: none;">
+                  <button>Sacar R$ 141,80</button>
+                  </a>
+               </div>
+               <script>
+                  var imageIndex = 0;
+                  var cliqueCount = 0;
+                  var aumentarSaldo = true;
+                  var imageList = [
+                    "images/velhorico1-atualizado.webp",
+                    "images/velhorico2-atualizado.webp",
+                    "images/velhorico3-atualizado.webp",
+                    "images/velhorico4-atualizado.webp",
+                    "images/velhorico5-atualizado.webp"
+                  ];
+                  
+                  function sendMessage() {
+                    var saldoSpan = document.getElementById('current-saldo');
+                    var currentSaldo = parseFloat(saldoSpan.textContent.replace('Saldo: R$ ', '').replace(',', '.'));
+                  
+                    if (aumentarSaldo) {
+                      switch (cliqueCount) {
+                        case 0:
+                          currentSaldo += 18.90;
+                          break;
+                        case 1:
+                          currentSaldo += 24.50;
+                          break;
+                        case 2:
+                          currentSaldo += 29.00;
+                          break;
+                        case 3:
+                          currentSaldo += 19.40;
+                          aumentarSaldo = false; // Não aumenta mais o saldo após este ponto
+                          break;
+                      }
+                    }
+                  
+                    cliqueCount = (cliqueCount + 1) % 4;
+                    saldoSpan.textContent = `Saldo: R$ ${currentSaldo.toFixed(2).replace('.', ',')}`;
+                  
+                    if (imageIndex < imageList.length - 1) {
+                      imageIndex++;
+                    }
+                  
+                    var profileImage = document.getElementById('profile-image');
+                    profileImage.src = imageList[imageIndex];
+                  
+                    updateButtonName();
+                  
+                    if (imageIndex === imageList.length - 1) {
+                      showPopup();
+                    }
+                  }
+                  
+                  function showPopup() {
+                    document.getElementById('popup').style.display = 'block';
+                    document.querySelector('.overlay').style.display = 'block';
+                  }
+                  
+                  function closePopup() {
+                    document.getElementById('popup').style.display = 'none';
+                    document.querySelector('.overlay').style.display = 'none';
+                  }
+                  
+                  function updateButtonName() {
+                    var sendMessageButton = document.getElementById('send-message-button');
+                    sendMessageButton.textContent = "Enviar uma mensagem com \"Oi\"";
+                  }
+               </script>
+            </div>
+         </div>
+      </div>
+      </div>
+      <div class="cb__drawer-canvas"></div>
+      <div data-elementor-type="popup" data-elementor-id="148" class="elementor elementor-148 elementor-location-popup" data-elementor-settings="{" open_selector":"a[href="\&quot;#saldopopup\&quot;]&quot;,&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}&quot;" data-elementor-post-type="elementor_library">
+      <div class="elementor-element elementor-element-f3a9ad6 e-flex e-con-boxed e-con e-parent" data-id="f3a9ad6" data-element_type="container" data-settings="{" content_width":"boxed"}"="" data-core-v316-plus="true">
+      <div class="e-con-inner">
+         <div class="elementor-element elementor-element-264b4b0 elementor-widget elementor-widget-heading" data-id="264b4b0" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+               <style>/*! elementor - v3.18.0 - 08-12-2023 */
+                  .elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}
+               </style>
+               <div class="elementor-heading-title elementor-size-default">Parabéns!</div>
+            </div>
+         </div>
+         <div class="elementor-element elementor-element-6c82387 elementor-widget elementor-widget-heading" data-id="6c82387" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+               <div class="elementor-heading-title elementor-size-default">Você realizou suas 5 primeiras mensagens!</div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+   
+      <script src="js/frontend.min.js" id="elementor-pro-frontend-js"></script>
+      <script src="js/waypoints.min.js" id="elementor-waypoints-js"></script>
+      <script src="js/core.min.js" id="jquery-ui-core-js"></script>
+      
+      <script src="js/frontend.min_1.js" id="elementor-frontend-js"></script>
+      <script src="js/elements-handlers.min.js" id="pro-elements-handlers-js"></script>
+       <!-- Script Utms -->
+            <script>
+            // Função para adicionar os parâmetros aos links
+            function adicionarParametrosAosLinks() {
+                const urlParams = new URLSearchParams(window.location.search);
+
+                const links = document.querySelectorAll('a');
+
+                links.forEach(link => {
+                    const href = new URL(link.href);
+                    urlParams.forEach((value, key) => {
+                        href.searchParams.set(key, value);
+                    });
+                    link.href = href.toString();
+                });
+            }
+
+            // Chamar a função ao carregar a página
+            document.addEventListener('DOMContentLoaded', adicionarParametrosAosLinks);
+            </script>
+  <!-- Script Utms -->
+<!-- Backredirect -->
+    <script>
+        var urlBackRedirect = '../saque'; // Lembre-se de usar a URL sem espaços
+        // Não altere nada abaixo dessa linha
+
+        urlBackRedirect = urlBackRedirect.trim() +
+            (urlBackRedirect.indexOf("?") > 0 ? '&' : '?') +
+            document.location.search.replace('?', '').toString();
+
+        history.pushState({}, "", location.href);
+        history.pushState({}, "", location.href);
+
+        window.onpopstate = function () {
+            setTimeout(function () {
+                location.href = urlBackRedirect;
+            }, 1);
+        };
+    </script>
+    <!-- Backredirect -->
+   </body>
+</html>
