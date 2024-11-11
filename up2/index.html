@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Saque</title>
+  <link rel="icon" href="https://i.postimg.cc/VsDvqK2q/image.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background-color: #000;
+      text-align: center;
+    }
+
+    .header-logo {
+      margin-top: 20px;
+    }
+
+    .header-logo img {
+      width: 150px;
+    }
+
+    h1 {
+      color: #00ff00;
+      font-size: 2.5em;
+      margin: 20px 0;
+    }
+
+    .progress-bar-container {
+      width: 80%;
+      background-color: #333;
+      border-radius: 5px;
+      margin: 20px auto;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background-color: #00ff00;
+    }
+
+    .highlight-text {
+      font-weight: bold;
+      color: #00ff00;
+    }
+
+    .important-info {
+      color: #ff0000;
+      font-weight: bold;
+    }
+
+    .pulsing-button {
+      display: inline-block;
+      background-color: #00ff00;
+      color: black;
+      font-weight: bold;
+      padding: 15px 30px;
+      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    .info-section {
+      background-color: #222;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 5px;
+      width: 80%;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: #111;
+    }
+
+    .footer img {
+      width: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo Centralizada com Link -->
+  <div class="header-logo">
+    <a href="https://go.perfectpay.com.br/PPU38CP6U21">
+      <img src="https://i.postimg.cc/9QrDFsX8/image.webp" alt="Logo">
+    </a>
+  </div>
+
+  <!-- Mensagem de Parabéns e Barra de Progresso -->
+  <h1>PARABÉNS</h1>
+  <p>SUA TRANSFERÊNCIA FOI RECEBIDA</p>
+  <div class="progress-bar-container">
+    <div class="progress-bar"></div>
+  </div>
+
+  <!-- Texto Explicativo -->
+  <p>Seu saque está sendo processado e será creditado em sua conta dentro de <span class="highlight-text">45 dias</span>.</p>
+  <p>Para que o seu dinheiro esteja disponível em sua conta em menos de <span class="highlight-text">5 minutos</span>, oferecemos uma taxa de adiantamento de saque de <span class="highlight-text">R$29,90</span>.</p>
+  <p>Após o pagamento, o link para download será enviado automaticamente via WhatsApp e E-mail, e seu saque será depositado na sua chave PIX.</p>
+
+  <!-- Botão de Pagamento com Animação -->
+  <a href="https://go.perfectpay.com.br/PPU38CP6U21" class="pulsing-button">PAGAR A TAXA DE ANTECIPAÇÃO</a>
+
+  <!-- Informação Adicional -->
+  <div class="info-section">
+    <h2>Por que devo pagar essa taxa?</h2>
+    <p>Essa taxa é necessária após a transferência de saldo para cobrir os custos operacionais e a manutenção de nossos servidores.</p>
+    <p class="important-info">Caso não consiga pagar a taxa hoje, você perderá a sua vaga. NÃO REEMBOLSÁVEL.</p>
+  </div>
+
+  <!-- Seção de Rodapé -->
+  <div class="footer">
+    <img src="https://i.postimg.cc/c1tgSpHF/image.png" alt="Imagem 1">
+    <img src="https://i.postimg.cc/HsGJs68d/image.png" alt="Imagem 2">
+  </div>
+<!-- Script Utms -->
+            <script>
+            // Função para adicionar os parâmetros aos links
+            function adicionarParametrosAosLinks() {
+                const urlParams = new URLSearchParams(window.location.search);
+
+                const links = document.querySelectorAll('a');
+
+                links.forEach(link => {
+                    const href = new URL(link.href);
+                    urlParams.forEach((value, key) => {
+                        href.searchParams.set(key, value);
+                    });
+                    link.href = href.toString();
+                });
+            }
+
+            // Chamar a função ao carregar a página
+            document.addEventListener('DOMContentLoaded', adicionarParametrosAosLinks);
+            </script>
+  <!-- Script Utms -->
+</body>
+</html>
