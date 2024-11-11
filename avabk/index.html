@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://i.postimg.cc/XNQ2zzTD/logo.webp">
-    <title>Ativar | OpinePix</title>
+    <link rel="icon" href="https://i.postimg.cc/VsDvqK2q/image.png">
+    <title>Oferta de Desconto</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,7 +32,7 @@
             font-size: 1.5em;
             font-weight: bold;
             color: #ffffff;
-            border: 2px solid #1dda01;
+            border: 2px solid #00ff00;
             padding: 10px 20px;
             border-radius: 10px;
             background: #00c953;
@@ -57,7 +57,7 @@
         }
 
         .highlight-green {
-            color: #1dda01;
+            color: #00ff00;
             font-weight: bold;
             font-size: 3em;
         }
@@ -67,29 +67,20 @@
             font-weight: bold;
             font-size: 2em;
         }
-        /* Contêiner pai para centralizar */
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* Isso garante que ocupe toda a altura da página */
-        }
 
         /* Botão de Desconto */
         .pulsing-button {
-            display: flex;
-            background-color: #1dda01;
-            color: white;
+            display: inline-block;
+            background-color: #00ff00;
+            color: black;
             font-weight: bold;
             padding: 15px 30px;
             margin: 20px 0;
             text-decoration: none;
             border-radius: 5px;
             animation: pulse 1.5s infinite;
-            justify-content: center;
-            align-items: center;
-            width: 100%; /* Largura do botão */
         }
+
         @keyframes pulse {
             0%, 100% {
                 transform: scale(1);
@@ -187,47 +178,27 @@
         margin: 0;
         font-size: 0.8em;
     }
-    img.imgpix {
-    max-width: 25px;
-    padding: 10px;
-}
-p {
-    text-align: justify;
-    line-height: 2;
-}
     </style>
 </head>
 <body>
 
     <!-- Seção de Logo e Saldo -->
     <div class="header-section">
-        <img src="https://i.postimg.cc/XNQ2zzTD/logo.webp" alt="Logo">
+        <img src="https://i.postimg.cc/9QrDFsX8/image.webp" alt="Logo">
         <div class="value-box">
             <span>Saldo: </span> <br>R$615,13
         </div>
     </div>
 
     <!-- Título -->
-    <div class="highlight-title">VAMOS ATIVAR SEU CADASTRO!</div>
+    <div class="highlight-title">Cupom de desconto ativado!</div>
 
     <!-- Subtítulo -->
-    <div class="faq-section">
-    <h2>1° PASSO</h2>
-    <p>A única forma de ativar o cadastro é fazendo o pagamento da taxa <span style="color:green;">TAXA DE INSCRIÇÃO no valor de R$ 29,90.</span> Este custo de <b>TAXA DE INSCRIÇÃO</b> vai ser <span style="color:green;">100% devolvido</span></b> para você juntamente com seu primeiro saque.</p>
-    </div>
-    <div class="faq-section">
-    <h2>2° PASSO</h2>
-    <p>Após realizar o pagamento, você receberá um e-mail contendo as informações do aplicativo e já conseguirá <span style="color:green;">acessar, solicitar o saque e fazer mais avaliações </span>para lucrar mais.</p>
+    <h2 class="subtitle">Parabéns, você acabou de ganhar <span style="color:green;">R$20</span> de desconto!</h2>
 
-    <div class="container">
-    <a href="../link" class="pulsing-button"><img class=imgpix src="pix.svg" alt="">REALIZAR MEU CADASTRO</a>
-    </div> 
-    <!-- Opção de sair -->
-    <p><a href="../avabk" style="color:#fff">Não quer acessar ? <span style="color:red;">Clique para sair</span></a></p>
     <!-- Seção Contador -->
-</div>
 <div class="countdown-section">
-    <p>Este acesso expira em:</p>
+    <p>Esse cupom expira em:</p>
     <div id="countdown">
         <div class="time-box">
             <span id="minutes">10</span>
@@ -241,7 +212,36 @@ p {
     </div>
 </div>
 
-   
+    <!-- GIF -->
+    <div class="gif-container">
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <lord-icon
+            src="https://cdn.lordicon.com/kezeezyg.json"
+            trigger="hover"
+            colors="primary:#00c953,secondary:#fff"
+            style="width:100%;height:150px">
+        </lord-icon>
+    </div>
+
+    <!-- Preços -->
+    <div class="main-text">
+        <span class="highlight-red">De R$147,00</span> <br>
+        <span class="highlight-green">Por R$39,90</span>
+    </div>
+
+    <!-- Botão de Desconto -->
+    <a href="https://go.perfectpay.com.br/PPU38COO3EG?upsell=true" class="pulsing-button">Eu quero esse desconto!</a>
+
+    <!-- Opção de sair -->
+    <p><a href="../avabk2" style="color:#fff">Não quer esse desconto? <span style="color:red;">Clique para sair</span></a></p>
+
+    <!-- Seção FAQ -->
+    <div class="faq-section">
+        <h2>Dúvidas Frequentes:</h2>
+        <p class="faq-item">Por que devo pagar essa taxa?</p>
+        <p class="faq-item">O que acontece se eu não pagar a taxa?</p>
+    </div>
+
     <!-- Seção de Rodapé -->
     <div class="footer">
         <img src="https://i.postimg.cc/c1tgSpHF/image.png" alt="Imagem 1">
@@ -290,7 +290,7 @@ p {
       <!-- Script Utms -->
     <!-- Script Backredirect com Parâmetros -->
 <script>
-    var backRedirectLink = '../avabk';
+    var backRedirectLink = '../avabk2';
     
     // Função para adicionar parâmetros da URL atual ao link de redirecionamento
     function adicionarParametrosAoRedirectLink(url) {

